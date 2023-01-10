@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MapActivity"
+    tools:showIn="@layout/activity_map">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/ripple_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="#0099CC"
+        app:rb_duration="3000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="6">
+
+
+
+
+
+    </com.skyfishjy.library.RippleBackground>
+
+
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="Search a place"
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar"
+        android:layout_margin="16dp"
+        app:mt_navIconEnabled="true"
+        android:elevation="5dp"
+        android:outlineProvider="bounds"
+        app:mt_placeholder="Search a place"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_margin="65dp"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtTravelTime"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btnUserLocation"
+        app:fabCustomSize="30dp"
+        app:maxImageSize="30dp"
+        app:borderWidth="0dp"
+        android:src="@drawable/location"
+        android:backgroundTint="@android:color/white"
+        app:fabSize="mini"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="90dp"
+        />
+
+
+    <Button
+        android:id="@+id/btn_find"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/DodgerBlue"
+        android:text="Find Landmark"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="20dp"
+        android:layout_marginLeft="140dp"
+        android:onClick="onClick"
+        android:text="Go"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnAddFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+        android:text="AddFav" />
+</RelativeLayout>
